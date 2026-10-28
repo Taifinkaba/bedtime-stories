@@ -19,10 +19,10 @@ public class BedtimeStories {
             FileReader fileReader = new FileReader("src/main/resources/" + fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-            String input;
+            String input = bufferedReader.readLine();
             int lineNumber = 1;
 
-            while((input = bufferedReader.readLine()) != null){
+            while(input != null){
                 System.out.printf("%d, %s%n", lineNumber, input);
                 lineNumber++;
             }
